@@ -5,6 +5,7 @@ from categories.models import Category
 
 class Product(models.Model):
     name = models.CharField('Nome', max_length=50)
+    preco = models.CharField('Nome', max_length=50)
     date_fabrication = models.DateField('Data Fabricacao', auto_now=False, auto_now_add=False) 
     is_active = models.BooleanField('Ativo', default=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -16,3 +17,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+#class Categoria1(models.Model):
+#    tipo = models.CharField('Tipo', max_length=20)
+#   volume = models.CharField('Volume', max_length=5)

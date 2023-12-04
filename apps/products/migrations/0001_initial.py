@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50, verbose_name='Nome')),
+                ('preco', models.CharField(max_length=50, verbose_name='Preço')),
                 ('date_fabrication', models.DateField(verbose_name='Data Fabricacao')),
                 ('is_active', models.BooleanField(default=False, verbose_name='Ativo')),
                 ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='categories.category')),
