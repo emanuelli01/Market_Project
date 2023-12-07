@@ -9,9 +9,10 @@ def add_to_cart(request, product_id):
     return redirect('cart:list_cart')
 
 def list_cart(request):
-    cart_items = CartItem.objects.filter(user=request.user)
+    cart_items = CartItem.objects.filter(user=request.user).order_by('id')
+    cart_total = sum(item.product.preco * item.quantity for item in cart_items)
 
-    return render(request, 'list_cart.html', {'cart_items': cart_items})
+    return render(request, 'list_cart.html', {'cart_items': cart_items, 'cart_total': cart_total})
 
 def delete_cartitem(request, product_id):
     cart_item = get_object_or_404(CartItem, user=request.user, product__id=product_id)
@@ -33,9 +34,3 @@ def increase_quantity(request, product_id):
     cart_item.save()
 
     return redirect('cart:list_cart')
-
-def list_cart(request):
-    cart_items = CartItem.objects.filter(user=request.user)
-    cart_total = sum(item.product.preco * item.quantity for item in cart_items)
-
-    return render(request, 'list_cart.html', {'cart_items': cart_items, 'cart_total': cart_total})
