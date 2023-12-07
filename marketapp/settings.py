@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     'clients.apps.ClientsConfig',
     'orders.apps.OrdersConfig',
     'cart.apps.CartConfig',
+    'hortifruti.apps.HortifrutiConfig',
+    'bebidas.apps.BebidasConfig',
+    'bomboniere.apps.BomboniereConfig',
 ]
 
 MIDDLEWARE = [
