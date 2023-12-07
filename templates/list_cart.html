@@ -17,26 +17,29 @@
                <table class="table table-hover">
                    <thead>
                        <tr>
-                           <th scope="col">#</th>
-                           <th scope="col">Nome</th>
-                           <th scope="col">Quantidade</th>
+                           <th scope="col">NOME</th>
+                           <th scope="col">PREÇO</th>
+                           <th scope="col">QUANTIDADE</th>
+                           <th scope="col">TOTAL DO ITEM</th>
                        </tr>
                    </thead>
                    <tbody>
                        {% for cart_item in cart_items %}
                            <tr>
-                               <th scope="row">{{ cart_item.product.id }}</th>
                                <td>{{ cart_item.product.name }}</td>
+                               <td>{{ cart_item.product.preco }}</td>
                                <td>{{ cart_item.quantity }}</td>
+                               <td>{{ cart_item.get_total }}</td>
                                <td>
-                                <a href="{% url 'cart:delete_cartitem' cart_item.product.id %}" class="btn btn-danger btn-sm">Excluir</a>
+                                <a href="{% url 'cart:delete_cartitem' cart_item.product.id %}" class="btn btn-danger btn-sm">LIMPAR</a>
                                 <a href="{% url 'cart:decrease_quantity' cart_item.product.id %}" class="btn btn-warning btn-sm">-</a>
-                                <a href="{% url 'cart:increase_quantity' cart_item.product.id %}" class="btn btn-primary btn-sm">+</a>
+                                <a href="{% url 'cart:increase_quantity' cart_item.product.id %}" class="btn btn-primary btn-sm", style="background-color: #006400; color: #ffffff;">+</a>
                             </td>
                            </tr>
                        {% endfor %}
                    </tbody>
                </table>
+               <p>PREÇO FINAL: {{ cart_total }}</p>
            </div>
        </div>
    </div>

@@ -20,12 +20,12 @@
                 <table class="table table-hover">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Preço</th>
-                    <th scope="col">Data de validade</th>
-                    <th scope="col">Disponível</th>
-                    <th scope="col">Categoria</th>
+                    <th scope="col">id</th>
+                    <th scope="col">NOME</th>
+                    <th scope="col">PREÇO</th>
+                    <th scope="col">DATA DE VALIDADE</th>
+                    <th scope="col">EM ESTOQUE</th>
+                    <th scope="col">CATEGORIA</th>
                     <th scope="col"></th>
                     </tr>
                 </thead>
@@ -38,21 +38,21 @@
                             <td>{{ product.date_fabrication }}</td>
                             <td>
                                 {% if product.is_active == True %}
-                                    Ativo
+                                    Disponível
                                 {% endif %}
                                 {% if product.is_active == False %}
-                                    Inativo
+                                    Indisponível
                                 {% endif %}
                             </td>
                             <td>{{ product.category }}</td>
                             <td>
-                                <a href="{% url 'products:edit_product' product.id %}" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="{% url 'products:edit_product' product.id %}" class="btn btn-primary btn-sm">EDITAR</a>
                             </td>
                             <td>    
-                                <a href="{% url 'products:delete_product' product.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                                <a href="{% url 'products:delete_product' product.id %}" class="btn btn-danger btn-sm ">EXCLUIR</a>
                             </td>
                             <td>    
-                                <a href="{% url 'cart:add_to_cart' product.id %}" class="btn btn-danger btn-sm ">Carrinho</a>
+                                <a href="{% url 'cart:add_to_cart' product.id %}" class="btn btn-danger btn-sm" style="background-color: #006400; color: #ffffff;">CARRINHO+</a>
                             </td>
                         </tr> 
                     {% endfor %}
