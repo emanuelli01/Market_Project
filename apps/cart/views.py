@@ -20,9 +20,9 @@ def list_cart(request):
 
     return render(request, 'list_cart.html', {'cart_items': cart_items})
 
-def delete_item(request, id_product):
-    product = Product.objects.get(id=id_product)
-    product.delete()
-    return redirect('products:list_products')
+def delete_cartitem(request, product_id):
+    cart_item = get_object_or_404(CartItem, user=request.user, product__id=product_id)
+    cart_item.delete()
+    return redirect('cart:list_cart')
 
 ##########################
