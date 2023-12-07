@@ -30,6 +30,8 @@
                                <td>{{ cart_item.quantity }}</td>
                                <td>
                                 <a href="{% url 'cart:delete_cartitem' cart_item.product.id %}" class="btn btn-danger btn-sm">Excluir</a>
+                                <a href="{% url 'cart:decrease_quantity' cart_item.product.id %}" class="btn btn-warning btn-sm">-</a>
+                                <a href="{% url 'cart:increase_quantity' cart_item.product.id %}" class="btn btn-primary btn-sm">+</a>
                             </td>
                            </tr>
                        {% endfor %}

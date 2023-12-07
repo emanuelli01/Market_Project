@@ -18,7 +18,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-#class Categoria1(models.Model):
-#    tipo = models.CharField('Tipo', max_length=20)
-#   volume = models.CharField('Volume', max_length=5)
