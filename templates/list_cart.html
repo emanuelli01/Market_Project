@@ -1,0 +1,38 @@
+<!-- list_cart.html em cart -->
+{% extends 'base.html' %}
+
+{% block title %}
+
+   Carrinho - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+   <div class="container">
+       <br />
+       <h5><b>Carrinho</b></h5>
+       <div class="row">
+           <div class="col-md-12">
+               <br />
+               <table class="table table-hover">
+                   <thead>
+                       <tr>
+                           <th scope="col">#</th>
+                           <th scope="col">Nome</th>
+                           <th scope="col">Quantidade</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       {% for cart_item in cart_items %}
+                           <tr>
+                               <th scope="row">{{ cart_item.product.id }}</th>
+                               <td>{{ cart_item.product.name }}</td>
+                               <td>{{ cart_item.quantity }}</td>
+                           </tr>
+                       {% endfor %}
+                   </tbody>
+               </table>
+           </div>
+       </div>
+   </div>
+{% endblock body %}

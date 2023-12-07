@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Order, OrderItem
 from rest_framework import viewsets
 from .serializer import OrderSerializer, OrderItemSerializer
@@ -11,4 +11,4 @@ class OrderViewSet(viewsets.ModelViewSet):
     
 class OrderItemViewSet(viewsets.ModelViewSet):
     queryset = OrderItem.objects.all()
-    serializer_class = OrderItemSerializer  
+    serializer_class = OrderItemSerializer 

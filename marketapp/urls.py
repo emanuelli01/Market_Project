@@ -22,6 +22,6 @@ urlpatterns = [
     path('categorias/', include('categories.urls', namespace='categories')),
     path('produtos/', include('products.urls', namespace='products')),
     path('clientes/', include('clients.urls', namespace='clients')),
-    path('pedidos/', include('orders.urls', namespace='orders')),
     path('pedidos_itens/', include('orders.urls', namespace='orders_items')),
+    path('cart/', include('cart.urls', namespace='list_cart')),
 ]

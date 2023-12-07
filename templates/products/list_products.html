@@ -51,6 +51,9 @@
                             <td>    
                                 <a href="{% url 'products:delete_product' product.id %}" class="btn btn-danger btn-sm ">Excluir</a>
                             </td>
+                            <td>    
+                                <a href="{% url 'cart:add_to_cart' product.id %}" class="btn btn-danger btn-sm ">Carrinho</a>
+                            </td>
                         </tr> 
                     {% endfor %}
                 </tbody>
@@ -60,3 +63,4 @@
     </div>
 
 {% endblock body %}
+
