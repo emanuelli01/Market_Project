@@ -27,4 +27,6 @@ urlpatterns = [
     path('hortifruti/', include('hortifruti.urls')),
     path('bebidas/', include('bebidas.urls')),
     path('bomboniere/', include('bomboniere.urls')),
+    path('suplementos/', include('suplementos.urls')),
+    path('padaria/', include('padaria.urls')),
 ]

@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'hortifruti.apps.HortifrutiConfig',
     'bebidas.apps.BebidasConfig',
     'bomboniere.apps.BomboniereConfig',
+    'suplementos.apps.SuplementosConfig',
+    'padaria.apps.PadariaConfig',
 ]
 
 MIDDLEWARE = [
