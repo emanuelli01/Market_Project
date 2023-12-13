@@ -11,7 +11,7 @@ Sistema feito como projeto final de semestre, tive como objetivo principal, cria
 	<code><img width="50" src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="HTML" title="HTML"/></code>
 	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code>
 	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/></code>
-	<code><img width="50" src="[https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png](https://avatars.githubusercontent.com/u/6392739?s=280&v=4)" alt="CSS" title="CSS"/></code>
+	<code><img width="50" src="https://avatars.githubusercontent.com/u/6392739?s=280&v=4" alt="CSS" title="CSS"/></code>
 </div>
 
 ## Como elas foram usadas
