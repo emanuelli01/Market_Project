@@ -1,6 +1,7 @@
 # MARKET E-COMMERCE
 
 Sistema feito como projeto final de semestre, tive como objetivo principal, criar um sistema híbrido centrado na facilidade do usuário sem conhecimento técnico, ter a praticidade em fazer suas compras online de forma objetiva, tanto por via web, quanto por dispositivos móveis, tudo a partir do conforto de sua casa.
+Neste projeto, o administrador tem o direito de adicionar novas categorias e produtos, ao passo que o usuário tem a capacidade de navegar pela lista de produtos conforme suas categorias e adicioná-los ao carrinho.
 
 ## Tecnologias utilizadas
 
