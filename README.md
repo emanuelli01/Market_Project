@@ -19,15 +19,18 @@ Sistema feito como projeto final de semestre, tive como objetivo principal, cria
 
 
 
-## Running end-to-end tests
+# Para execução
+- Ter o ambiente virtual com todas as dependências listadas abaixo. (Mini Conda)
+- Executar o arquivo manage.py na raiz do projeto por linha de comando "manage.py runserver".
 
-%windir%\System32\cmd.exe "/K" C:\ProgramData\miniconda3\Scripts\activate.bat C:\ProgramData\miniconda3
+## Dependências
+### Conda
+- pip
+- django
 
-
-conda activate projetoapp
-
-
-cd apps 
-
-
-python manage.py runserver
+### Pip
+- python-decouple
+- psycopg2-binary
+- djangorestframework
+- markdown
+- django-filter
